@@ -1,0 +1,48 @@
+#include <stdio.h>
+ int main(){
+    int n;
+    scanf("%d", &n);
+    long long arr[n];
+    for(int i = 0; i < n; i++)
+    {
+        scanf("%lld", &arr[i]);
+    }
+    for(int i = 0; i < n - 1; i++)
+    {
+    for(int j = 0; j < n - i - 1; j++)
+    {
+        if(arr[j] > arr[j + 1])
+        {
+            long long temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
+        }
+    }
+}
+    int left = 0;
+    int right = n - 1;
+    int round = 1;
+    long long bobble = 0;
+    long long aloo = 0; 
+    while(left <= right)
+{
+    if(round % 2 != 0)
+    {
+        bobble += arr[right];
+        aloo += arr[left];
+    }
+    else
+    {
+        bobble += arr[left];
+        aloo += arr[right];
+    }
+
+    left++;
+    right--;
+    round++;
+}
+        round++;
+        printf("%lld %lld\n", bobble, aloo);
+        return 0;
+    }
+    
