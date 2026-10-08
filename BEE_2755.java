@@ -9,6 +9,5 @@ public class BEE_2755 {
         System.out.println("(._.) ( l: ) ( .-. ) ( :l ) (._.)");
         System.out.println("(^_-) (-_-) (-_^)");
         System.out.println("(\"_\") ('.')");
-
     }
 }
